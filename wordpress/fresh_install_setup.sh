@@ -112,7 +112,6 @@ pluginArray=(
       "branda-white-labeling" 
       "user-role-editor" 
       "wp-mail-smtp"
-      "wordpress-seo"
       ""
 )
 for i in "${pluginArray[@]}"
@@ -120,4 +119,5 @@ do
       autoPlug "$i"
 done
 wp plugin install wordfence
+wp plugin install wordpress-seo
 echo "Done."
