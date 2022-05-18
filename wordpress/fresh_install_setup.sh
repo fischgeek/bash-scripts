@@ -38,8 +38,8 @@ fi
 echo "Setting configuration options..."
 wp option update default_comment_status ''
 wp option update blogdescription ''
-wp config set WP_HOME '$siteUrl'
-wp config set WP_SITEURL '$siteUrl'
+wp config set WP_HOME "$siteUrl"
+wp config set WP_SITEURL "$siteUrl"
 echo "Done."
 
 echo "Removing unwanted content..."
@@ -96,9 +96,8 @@ done
 echo "Done."
 
 echo "Adding users..."
-wp user create kero-collab collab@kerocreative.com --role=developer
-wp user create kero-kelsey kelsey@kerocreative.com --role=administrator
-wp user create kero-tianna tianna@kerocreative.com --role=administrator
+#wp user create user-name user@email --role=administrator
+#wp user create user-name user@email --role=developer
 echo "Done."
 
 echo "Installing and activating plugins..."
@@ -114,6 +113,7 @@ pluginArray=(
       "user-role-editor" 
       "wp-mail-smtp"
       "wordpress-seo"
+      ""
 )
 for i in "${pluginArray[@]}"
 do 
